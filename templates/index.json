@@ -9,99 +9,21 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Stop Losing Sales on Out-of-Stock Products <span class='highlight'>ESTS PreOrder | Notify</span>",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "The smartest way to manage out-of-stock items. Enable seamless Pre-Orders, set Restock Alerts, and build hype with Coming Soon features—all in one powerful app.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Install Free on Shopify",
-            "button_link_1": "https://apps.shopify.com/ests-preorder-notify",
-            "button_style_secondary_1": false,
-            "button_label_2": "Explore Features",
-            "button_link_2": "#saas-features",
-            "button_style_secondary_2": true
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-4",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
+    "feature_showcase": {
+      "type": "feature-showcase",
+      "settings": {}
     },
-    "saas_features": {
-      "type": "saas-features",
-      "blocks": {
-        "f1": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z\"/><path d=\"M3 6h18\"/><path d=\"M16 10a4 4 0 0 1-8 0\"/></svg>",
-            "title": "Pre-Order Functionality",
-            "text": "Allow customers to pre-order out-of-stock products. Set quantity limits and schedule availability easily."
-          }
-        },
-        "f2": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9\"/><path d=\"M10.3 21a1.94 1.94 0 0 0 3.4 0\"/></svg>",
-            "title": "Notify Me Button",
-            "text": "Show a 'Notify Me' button for out-of-stock items. Automatically send email alerts when products are restocked."
-          }
-        },
-        "f3": {
-          "type": "feature",
-          "settings": {
-            "icon_svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"4\" rx=\"2\" ry=\"2\"/><line x1=\"16\" x2=\"16\" y1=\"2\" y2=\"6\"/><line x1=\"8\" x2=\"8\" y1=\"2\" y2=\"6\"/><line x1=\"3\" x2=\"21\" y1=\"10\" y2=\"10\"/></svg>",
-            "title": "Coming Soon Mode",
-            "text": "Display a 'Coming Soon' button for upcoming products. Build anticipation and boost engagement before launch."
-          }
-        }
-      },
-      "block_order": [
-        "f1",
-        "f2",
-        "f3"
-      ],
-      "settings": {
-        "title": "Engineered for Sales Growth",
-        "heading_size": "h1",
-        "description": ""
-      }
+    "info_grids": {
+      "type": "info-grids",
+      "settings": {}
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
         "collection": "beauty-products",
-        "products_to_show": 12,
+        "products_to_show": 4,
         "title": "Try Our Demo Products",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "description": "See how Pre-Order, Notify Me, and Coming Soon features look in action.",
         "show_description": true,
         "description_style": "body",
@@ -123,62 +45,20 @@
         "padding_bottom": 80
       }
     },
-    "saas_showcase": {
-      "type": "saas-showcase",
-      "blocks": {
-        "s1": {
-          "type": "showcase",
-          "settings": {
-            "title": "Seamless Shopify Integration",
-            "text": "<p>Our app integrates perfectly with your Shopify store. Enable or disable features with a single click and track your sales directly from the dashboard.</p>",
-            "button_label": "View Features →",
-            "button_link": ""
-          }
-        },
-        "s2": {
-          "type": "showcase",
-          "settings": {
-            "title": "Smart Restock Alerts",
-            "text": "<p>Automatically notify customers when their favorite products are back in stock. Build a waitlist and drive instant sales upon restock.</p>",
-            "button_label": "Learn More →",
-            "button_link": ""
-          }
-        },
-        "s3": {
-          "type": "showcase",
-          "settings": {
-            "title": "Coming Soon Hype",
-            "text": "<p>Generate excitement for new arrivals. Show 'Coming Soon' buttons and capture leads before the official launch.</p>",
-            "button_label": "See Example →",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ],
-      "settings": {
-        "title": "The Ultimate Solution for Out-of-Stock Management",
-        "heading_size": "h1"
-      }
-    },
     "saas_cta": {
       "type": "saas-cta",
       "settings": {
-        "title": "Boost Your Sales Today",
-        "text": "Join thousands of successful Shopify stores using ESTS PreOrder | Notify to manage their products.",
-        "button_label": "Install Now",
+        "title": "Ready to boost your sales?",
+        "text": "Join thousands of merchants who use ESTS PreOrder | Notify to manage their out-of-stock products.",
+        "button_label": "Install App Now",
         "button_link": "https://apps.shopify.com/ests-preorder-notify"
       }
     }
   },
   "order": [
-    "image_banner",
-    "saas_features",
+    "feature_showcase",
+    "info_grids",
     "featured_collection",
-    "saas_showcase",
     "saas_cta"
   ]
 }

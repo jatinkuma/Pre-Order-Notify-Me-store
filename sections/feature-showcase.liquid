@@ -1,0 +1,119 @@
+{%- style -%}
+  .showcase-visual-mockup {
+    width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .mockup-item {
+    height: 40px;
+    background: #f3f4f6;
+    border-radius: 4px;
+    width: 100%;
+  }
+  .mockup-button {
+    height: 45px;
+    background: #0047FF;
+    border-radius: 6px;
+    width: 150px;
+    margin-top: auto;
+  }
+  .mockup-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #4ADE80;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+{%- endstyle -%}
+
+<section class="feature-showcase-section">
+  <div class="page-width">
+    <!-- Feature 1: Back in Stock -->
+    <div class="feature-showcase-container bg-blue">
+      <div class="feature-content">
+        <span class="feature-label">Smart Notifications</span>
+        <h2 class="feature-title">BACK IN STOCK DEMO</h2>
+        <p class="feature-description">Automatically notify customers when their favorite products are back in stock. Build a waitlist and drive instant sales upon restock without lifting a finger.</p>
+        <div class="feature-actions">
+          <a href="#" class="button button--secondary">View Back in Stock Product</a>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="showcase-visual-mockup">
+          <div class="mockup-badge">In Stock</div>
+          <div class="mockup-item" style="width: 60%"></div>
+          <div class="mockup-item" style="width: 40%"></div>
+          <div class="mockup-item" style="width: 100%; height: 80px;"></div>
+          <div class="mockup-button" style="background: #0047FF;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2: Pre-order -->
+    <div class="feature-showcase-container bg-green reverse">
+      <div class="feature-content">
+        <span class="feature-label">Pre-Order Manager</span>
+        <h2 class="feature-title">SHOPIFY PREORDER DEMO</h2>
+        <p class="feature-description">Capture demand before launch and build anticipation for new drops. Allow customers to buy unavailable items in advance and manage your cash flow better.</p>
+        <div class="feature-actions">
+          <a href="#" class="button button--secondary">View Preorder Product</a>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="showcase-visual-mockup">
+          <div class="mockup-badge" style="background: #059669;">Pre-order</div>
+          <div class="mockup-item" style="width: 70%"></div>
+          <div class="mockup-item" style="width: 30%"></div>
+          <div class="mockup-item" style="width: 100%; height: 80px;"></div>
+          <div class="mockup-button" style="background: #059669;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3: Coming Soon -->
+    <div class="feature-showcase-container bg-black">
+      <div class="feature-content">
+        <span class="feature-label">Product Launch</span>
+        <h2 class="feature-title">COMING SOON DEMO</h2>
+        <p class="feature-description">Generate excitement for new arrivals. Show "Coming Soon" buttons and capture customer interest early. Build your email list before you even launch.</p>
+        <div class="feature-actions">
+          <a href="#" class="button button--secondary">View Coming Soon Product</a>
+        </div>
+      </div>
+      <div class="feature-visual">
+        <div class="showcase-visual-mockup">
+          <div class="mockup-badge" style="background: #374151;">Coming Soon</div>
+          <div class="mockup-item" style="width: 50%"></div>
+          <div class="mockup-item" style="width: 80%"></div>
+          <div class="mockup-item" style="width: 100%; height: 80px;"></div>
+          <div class="mockup-button" style="background: #374151;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Feature Showcase",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Feature Showcase"
+    }
+  ]
+}
+{% endschema %}
