@@ -7,13 +7,17 @@
     margin-bottom: 64px !important;
   }
   .saas-features .section-label {
-    display: block;
+    display: inline-block !important;
+    background: rgba(198, 255, 0, 0.1) !important;
     color: var(--color-brand-1) !important;
-    font-size: 14px !important;
+    font-size: 13px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.1em !important;
-    margin-bottom: 16px !important;
+    margin-bottom: 24px !important;
+    padding: 8px 20px !important;
+    border-radius: var(--radius-pill) !important;
+    border: 1px solid rgba(198, 255, 0, 0.2) !important;
   }
   .saas-features .title {
     font-size: 42px !important;
@@ -24,7 +28,8 @@
   .saas-features-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 32px !important;
+    gap: 40px !important;
+    margin-top: 48px !important;
   }
   .saas-feature-card {
     background: var(--surface-1) !important;
@@ -81,44 +86,60 @@
   }
 {%- endstyle -%}
 
-<section class="saas-features">
+<section class="saas-features" id="saas-features">
   <div class="page-width">
-    <div class="collection__title center">
-      <span class="section-label">Features</span>
-      <h2 class="title">Everything you need to grow</h2>
+    <div class="collection__title center scroll-trigger">
+      <span class="section-label">Everything You Need</span>
+      <h2 class="title">Professional Tools for Growth</h2>
     </div>
 
     <div class="saas-features-grid">
-      <div class="saas-feature-card">
+      <div class="saas-feature-card scroll-trigger">
         <div class="saas-feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         </div>
-        <h3 class="saas-feature-title">Lightning Fast Setup</h3>
-        <p class="saas-feature-text">Install and go live in under 2 minutes. No coding required, no complex configurations.</p>
+        <h3 class="saas-feature-title">Pre-Order Functionality</h3>
+        <p class="saas-feature-text">Let customers buy unavailable items in advance. Set quantity limits, schedule availability, and never miss a sale even when stock is zero.</p>
       </div>
 
-      <div class="saas-feature-card">
+      <div class="saas-feature-card scroll-trigger">
         <div class="saas-feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
         </div>
-        <h3 class="saas-feature-title">Smart Analytics</h3>
-        <p class="saas-feature-text">Real-time insights into your store performance with actionable recommendations.</p>
+        <h3 class="saas-feature-title">Smart Notify Me</h3>
+        <p class="saas-feature-text">Show an elegant "Notify Me" button for out-of-stock items. Automatically send professional email alerts as soon as products are restocked.</p>
       </div>
 
-      <div class="saas-feature-card">
+      <div class="saas-feature-card scroll-trigger">
         <div class="saas-feature-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21\" y1=\"10\" y2=\"10\"/></svg>
         </div>
-        <h3 class="saas-feature-title">Fully Customizable</h3>
-        <p class="saas-feature-text">Match your brand perfectly with flexible design controls and theme integration.</p>
+        <h3 class="saas-feature-title">Coming Soon Hype</h3>
+        <p class="saas-feature-text">Generate excitement for upcoming product launches. Display "Coming Soon" buttons to build anticipation and capture customer interest early.</p>
       </div>
 
-      <div class="saas-feature-card">
+      <div class="saas-feature-card scroll-trigger">
         <div class="saas-feature-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         </div>
-        <h3 class="saas-feature-title">Enterprise Security</h3>
-        <p class="saas-feature-text">Bank-level encryption and GDPR compliance. Your data is always safe with us.</p>
+        <h3 class="saas-feature-title">Sales Tracking</h3>
+        <p class="saas-feature-text">Seamlessly integrated with Shopify for one-click enable/disable. Track your pre-order sales and restock conversions directly in your dashboard.</p>
+      </div>
+
+      <div class="saas-feature-card scroll-trigger">
+        <div class="saas-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </div>
+        <h3 class="saas-feature-title">Quantity Limits</h3>
+        <p class="saas-feature-text">Take full control of your pre-orders by setting specific quantity limits per customer or per product to manage your inventory better.</p>
+      </div>
+
+      <div class="saas-feature-card scroll-trigger">
+        <div class="saas-feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+        </div>
+        <h3 class="saas-feature-title">One-Click Setup</h3>
+        <p class="saas-feature-text">No coding required. Our app integrates effortlessly with your existing theme, allowing you to go live and start boosting sales in minutes.</p>
       </div>
     </div>
   </div>

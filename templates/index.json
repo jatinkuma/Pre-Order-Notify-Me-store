@@ -15,25 +15,25 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "ESTS PreOrder | Notify",
+            "heading": "Stop Losing Sales on Out-of-Stock Products <span class='highlight'>ESTS PreOrder | Notify</span>",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Boost Sales with Smart Pre-Order, Notify Me & Coming Soon Features. Manage out-of-stock and upcoming products effortlessly.",
+            "text": "The smartest way to manage out-of-stock items. Enable seamless Pre-Orders, set Restock Alerts, and build hype with Coming Soon features—all in one powerful app.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Explore Features",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Install Free on Shopify",
+            "button_link_1": "https://apps.shopify.com/ests-preorder-notify",
             "button_style_secondary_1": false,
-            "button_label_2": "Install App",
-            "button_link_2": "https://apps.shopify.com/ests-preorder-notify",
+            "button_label_2": "Explore Features",
+            "button_link_2": "#saas-features",
             "button_style_secondary_2": true
           }
         }
