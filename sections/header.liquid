@@ -155,13 +155,9 @@
 
     <nav class="header__inline-menu">
       <ul class="header__menu-list" role="list">
-        {%- for link in linklists[section.settings.menu].links -%}
-          <li>
-            <a href="{{ link.url }}" class="header__menu-item">
-              {{ link.title | escape }}
-            </a>
-          </li>
-        {%- endfor -%}
+        <li><a href="/" class="header__menu-item">Home</a></li>
+        <li><a href="/collections/all" class="header__menu-item">All Products</a></li>
+        <li><a href="https://apps.shopify.com/ests-preorder-notify" class="header__menu-item" target="_blank">App Features</a></li>
       </ul>
     </nav>
 
