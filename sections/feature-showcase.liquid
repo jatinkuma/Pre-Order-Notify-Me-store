@@ -1,0 +1,191 @@
+{%- style -%}
+  .premium-hero-v2 {
+    padding: 160px 0 100px;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 71, 255, 0.08) 0%, #ffffff 60%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-badge-v2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 10px 24px;
+    border-radius: 99px;
+    border: 1px solid rgba(0, 71, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 71, 255, 0.05);
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #0047FF;
+  }
+  .hero-badge-v2 .dot {
+    width: 8px;
+    height: 8px;
+    background: #4ADE80;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4ADE80;
+  }
+  .hero-title-v2 {
+    font-size: clamp(3.5rem, 10vw, 6.5rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    margin-bottom: 40px;
+    color: #0F172A;
+  }
+  .hero-title-v2 span {
+    display: block;
+    color: #0047FF;
+    font-style: italic;
+  }
+  .hero-desc-v2 {
+    font-size: 22px;
+    color: #475569;
+    max-width: 850px;
+    margin: 0 auto 60px;
+    line-height: 1.5;
+  }
+  .hero-mockup-v2 {
+    max-width: 1000px;
+    margin: 80px auto 0;
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .mockup-inner-v2 {
+    background: #F8FAFC;
+    border-radius: 16px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #94A3B8;
+    position: relative;
+  }
+  .mockup-badge-v2 {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #0047FF;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 99px;
+    font-size: 14px;
+  }
+{%- endstyle -%}
+
+<section class="premium-hero-v2">
+  <div class="page-width">
+    <div class="hero-badge-v2">
+      <span class="dot"></span> Trusted by 5,000+ Shopify Merchants
+    </div>
+    <h1 class="hero-title-v2">Turn Out-of-Stock <span>into Revenue.</span></h1>
+    <p class="hero-desc-v2">Stop losing customers when items sell out. **ESTS PreOrder | Notify** empowers your store with intelligent pre-orders, automated restock alerts, and high-converting 'Coming Soon' campaigns.</p>
+    
+    <div class="hero-btns-v2">
+      <a href="https://apps.shopify.com/ests-preorder-notify" class="btn-premium btn-primary-premium">Install App Free — Start Selling</a>
+      <a href="#features" class="btn-premium btn-secondary-premium" style="margin-left: 20px;">View Full Features</a>
+    </div>
+
+    <div class="hero-mockup-v2">
+      <div class="mockup-inner-v2">
+        <div class="mockup-badge-v2">Pre-Order Enabled</div>
+        <div style="text-align: center;">
+           <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+           <p style="margin-top: 20px;">High-Conversion Product Preview</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="app-description-deep" style="padding: 120px 0; background: #F8FAFC;" id="features">
+  <div class="page-width">
+    <div class="section-header">
+      <span class="section-label">Why Choose ESTS?</span>
+      <h2 class="section-title">The Complete Toolkit for <br>Stock Management</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+      <!-- Pre-Order -->
+      <div class="feature-card-premium">
+        <div class="feature-icon-box">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </div>
+        <h3 class="feature-card-title">Pre-Order Engine</h3>
+        <p class="feature-card-text">Enable customers to purchase unavailable items in advance. Perfect for upcoming launches or manufacturing delays. Includes quantity limits and scheduled availability.</p>
+      </div>
+
+      <!-- Notify Me -->
+      <div class="feature-card-premium">
+        <div class="feature-icon-box">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3 class="feature-card-title">Restock Alerts</h3>
+        <p class="feature-card-text">Don't let stock-outs be the end of the journey. Display an elegant 'Notify Me' button and automatically send high-converting email alerts when products return.</p>
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="feature-card-premium">
+        <div class="feature-icon-box">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3 class="feature-card-title">Coming Soon Mode</h3>
+        <p class="feature-card-text">Build massive hype before a product launch. Replace 'Add to Cart' with 'Coming Soon' to capture leads and generate excitement for your next big drop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="integration-showcase" style="padding: 120px 0;">
+  <div class="page-width">
+    <div style="display: flex; align-items: center; gap: 80px;">
+      <div style="flex: 1;">
+        <span class="section-label" style="margin-bottom: 24px;">Seamless Integration</span>
+        <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Built for Shopify,<br>Designed for Scale.</h2>
+        <p style="font-size: 18px; color: #475569; margin-bottom: 40px;">Our app integrates natively with your Shopify theme, requiring **zero code** to get started. Enable or disable features with a single click and track your sales performance directly from your dashboard.</p>
+        
+        <ul style="list-style: none; padding: 0; margin-bottom: 40px;">
+          <li style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; font-weight: 600;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#4ADE80" stroke="white" stroke-width="1"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline></svg> One-Click Installation & Setup
+          </li>
+          <li style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px; font-weight: 600;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#4ADE80" stroke="white" stroke-width="1"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline></svg> Advanced Sales Tracking Dashboard
+          </li>
+          <li style="display: flex; align-items: center; gap: 15px; font-weight: 600;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#4ADE80" stroke="white" stroke-width="1"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline></svg> 24/7 Expert Technical Support
+          </li>
+        </ul>
+
+        <a href="https://apps.shopify.com/ests-preorder-notify" class="btn-premium btn-primary-premium">Get Started Now</a>
+      </div>
+      <div style="flex: 1; background: #F8FAFC; border-radius: 32px; padding: 60px; text-align: center;">
+         <div style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+            <div style="height: 10px; width: 100px; background: #E2E8F0; border-radius: 5px; margin-bottom: 20px;"></div>
+            <div style="height: 20px; width: 100%; background: #F1F5F9; border-radius: 5px; margin-bottom: 10px;"></div>
+            <div style="height: 20px; width: 80%; background: #F1F5F9; border-radius: 5px; margin-bottom: 30px;"></div>
+            <div style="height: 50px; width: 100%; background: #0047FF; border-radius: 10px;"></div>
+         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Feature Showcase Premium",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Feature Showcase Premium"
+    }
+  ]
+}
+{% endschema %}
