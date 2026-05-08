@@ -69,31 +69,80 @@
             if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
               assign quantity_rule_soldout = true
             endif
+
+            assign is_preorder = false
+            if product.tags contains 'pre-order'
+              assign is_preorder = true
+            endif
+
+            assign is_notifyme = false
+            if product.tags contains 'notify-me' and product.selected_or_first_available_variant.available == false
+              assign is_notifyme = true
+            endif
+
+            assign is_comingsoon = false
+            if product.tags contains 'coming-soon'
+              assign is_comingsoon = true
+            endif
           -%}
-          <button
-            id="ProductSubmitButton-{{ section_id }}"
-            type="submit"
-            name="add"
-            class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
-            {% if product.selected_or_first_available_variant.available == false
-              or quantity_rule_soldout
-              or product.selected_or_first_available_variant == null
-            %}
+          
+          {%- if is_comingsoon -%}
+            <button
+              type="button"
+              class="product-form__submit button button--full-width button--primary"
+              style="background-color: #C6FF00 !important; color: #000000 !important;"
               disabled
-            {% endif %}
-          >
-            <span>
-              {%- if product.selected_or_first_available_variant == null -%}
-                {{ 'products.product.unavailable' | t }}
-              {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
-                {{ 'products.product.sold_out' | t }}
-              {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}
-              {%- endif -%}
-            </span>
-            {%- render 'loading-spinner' -%}
-          </button>
-          {%- if show_dynamic_checkout -%}
+            >
+              <span>Coming Soon</span>
+            </button>
+          {%- elsif is_notifyme -%}
+            <button
+              type="button"
+              class="product-form__submit button button--full-width button--secondary"
+              style="border-color: #C6FF00 !important; color: #ffffff !important;"
+            >
+              <span>Notify Me When Available</span>
+            </button>
+            <button
+              type="submit"
+              name="add"
+              class="product-form__submit button button--full-width button--primary"
+              style="margin-top: 10px; background-color: #C6FF00 !important; color: #000000 !important;"
+            >
+              <span>Buy it now</span>
+            </button>
+          {%- else -%}
+            <button
+              id="ProductSubmitButton-{{ section_id }}"
+              type="submit"
+              name="add"
+              class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+              {% if product.selected_or_first_available_variant.available == false
+                or quantity_rule_soldout
+                or product.selected_or_first_available_variant == null
+              %}
+                disabled
+              {% endif %}
+              {% if is_preorder %}
+                style="background-color: #C6FF00 !important; color: #000000 !important;"
+              {% endif %}
+            >
+              <span>
+                {%- if product.selected_or_first_available_variant == null -%}
+                  {{ 'products.product.unavailable' | t }}
+                {%- elsif is_preorder -%}
+                  Pre-order
+                {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                  {{ 'products.product.sold_out' | t }}
+                {%- else -%}
+                  {{ 'products.product.add_to_cart' | t }}
+                {%- endif -%}
+              </span>
+              {%- render 'loading-spinner' -%}
+            </button>
+          {%- endif -%}
+
+          {%- if show_dynamic_checkout and is_comingsoon == false and is_notifyme == false -%}
             {{ form | payment_button }}
           {%- endif -%}
         </div>

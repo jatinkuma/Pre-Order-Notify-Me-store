@@ -88,8 +88,8 @@
   }
 
   .header__menu-item:hover {
-    color: var(--text-primary) !important;
-    background: rgba(0, 0, 0, 0.03) !important;
+    color: var(--color-brand-1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
   }
 
   .header__actions {
@@ -97,8 +97,8 @@
   }
 
   .header__install-btn {
-    background: var(--gradient-brand) !important;
-    color: #ffffff !important;
+    background: var(--color-brand-1) !important;
+    color: #000000 !important;
     padding: 12px 28px !important;
     border-radius: var(--radius-pill) !important;
     font-size: 14px !important;
@@ -106,14 +106,14 @@
     text-decoration: none !important;
     transition: all 0.3s ease !important;
     display: inline-block !important;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2) !important;
+    box-shadow: var(--glow-brand) !important;
     white-space: nowrap !important;
   }
 
   .header__install-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3) !important;
-    filter: brightness(1.05);
+    box-shadow: var(--glow-strong) !important;
+    filter: brightness(1.1);
   }
 
   @media screen and (max-width: 989px) {
@@ -148,7 +148,7 @@
           {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
           {{ settings.logo | image_url: width: 240 | image_tag: class: 'header__heading-logo', alt: logo_alt, style: 'height: auto; width: 120px;' }}
         {%- else -%}
-          <span class="h4" style="font-weight: 800; letter-spacing: -0.04em; color: var(--text-primary); text-transform: uppercase;">{{ shop.name }}</span>
+          <span class="h4" style="font-weight: 800; letter-spacing: -0.04em; color: var(--color-brand-1); text-transform: uppercase;">ESTS PreOrder</span>
         {%- endif -%}
       </a>
     </div>
@@ -166,7 +166,7 @@
     </nav>
 
     <div class="header__actions">
-      <a href="https://apps.shopify.com/product-inquiry" class="header__install-btn">Install App</a>
+      <a href="https://apps.shopify.com/ests-preorder-notify" class="header__install-btn">Install App</a>
     </div>
   </header>
 </header-wrapper>

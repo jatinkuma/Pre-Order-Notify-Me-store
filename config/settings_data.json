@@ -127,6 +127,24 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement": {
+            "type": "announcement",
+            "settings": {
+              "text": "🚀 Boost your sales with Pre-Orders and Restock Alerts! 🚀",
+              "link": "https://apps.shopify.com/ests-preorder-notify"
+            }
+          }
+        },
+        "block_order": [
+          "announcement"
+        ],
+        "settings": {
+          "color_scheme": "scheme-4"
+        }
+      },
       "main-password-header": {
         "type": "main-password-header",
         "settings": {
@@ -184,13 +202,13 @@
       },
       "scheme-4": {
         "settings": {
-          "background": "#121212",
+          "background": "#000000",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#121212",
+          "button": "#C6FF00",
+          "button_label": "#000000",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#000000"
         }
       },
       "scheme-5": {
