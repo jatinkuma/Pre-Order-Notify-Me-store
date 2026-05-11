@@ -3,82 +3,95 @@
     position: relative;
     overflow: hidden;
     background:
-      radial-gradient(circle at top left, rgba(0, 95, 255, 0.12), transparent 32%),
-      radial-gradient(circle at top right, rgba(16, 185, 129, 0.14), transparent 24%),
-      linear-gradient(180deg, #f7fbff 0%, #ffffff 42%, #f6f8fc 100%);
+      radial-gradient(circle at 12% 10%, rgba(198, 255, 0, 0.12), transparent 22%),
+      radial-gradient(circle at 84% 18%, rgba(198, 255, 0, 0.08), transparent 18%),
+      linear-gradient(180deg, #111313 0%, #171919 48%, #101111 100%);
+    color: #ffffff;
+  }
+
+  .app-demo-home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+    opacity: 0.22;
+    pointer-events: none;
   }
 
   .app-demo-home .page-width {
     position: relative;
     z-index: 1;
+    max-width: 138rem;
   }
 
   .app-demo-home__hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    grid-template-columns: minmax(0, 1fr) minmax(32rem, 54rem);
     gap: 4.8rem;
     align-items: center;
-    padding: 8rem 0 6rem;
+    padding: 8rem 0 5rem;
   }
 
   .app-demo-home__eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 0.8rem;
-    padding: 0.9rem 1.6rem;
+    gap: 1rem;
     margin-bottom: 2rem;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #0f5cff;
-    font-size: 1.2rem;
+    color: #d9ff36;
+    font-size: 1.4rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
-  .app-demo-home__eyebrow-dot {
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    background: #19c37d;
-    box-shadow: 0 0 0 0.5rem rgba(25, 195, 125, 0.14);
+  .app-demo-home__eyebrow-icon {
+    display: grid;
+    place-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid rgba(198, 255, 0, 0.45);
+    border-radius: 1.4rem;
+    color: #d9ff36;
+    background: rgba(198, 255, 0, 0.06);
+    box-shadow: 0 0 24px rgba(198, 255, 0, 0.08);
   }
 
   .app-demo-home__title {
-    margin: 0 0 2rem;
-    color: #0f172a;
-    font-size: clamp(4rem, 7vw, 7rem);
-    line-height: 0.94;
+    max-width: 82rem;
+    margin: 0 0 1.8rem;
+    color: #ffffff;
+    font-size: clamp(4rem, 7vw, 7.2rem);
+    line-height: 0.95;
     letter-spacing: -0.06em;
   }
 
   .app-demo-home__title span {
-    display: block;
-    color: #0f5cff;
+    color: #d9ff36;
   }
 
   .app-demo-home__description {
-    max-width: 62rem;
-    margin: 0 0 2.8rem;
-    color: #475569;
-    font-size: 1.85rem;
-    line-height: 1.7;
+    max-width: 75rem;
+    margin: 0 0 2.6rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1.8rem;
+    line-height: 1.75;
   }
 
   .app-demo-home__actions {
     display: flex;
     flex-wrap: wrap;
     gap: 1.4rem;
-    margin-bottom: 2.8rem;
+    margin-bottom: 3rem;
   }
 
   .app-demo-home__button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    min-height: 5.4rem;
+    min-height: 5.5rem;
     padding: 1.4rem 2.4rem;
     border-radius: 999px;
     text-decoration: none;
@@ -92,188 +105,160 @@
   }
 
   .app-demo-home__button--primary {
-    background: linear-gradient(135deg, #0f5cff 0%, #1d4ed8 100%);
-    color: #ffffff;
-    box-shadow: 0 18px 36px rgba(15, 92, 255, 0.24);
+    background: #d9ff00;
+    color: #101111;
+    box-shadow: 0 18px 42px rgba(198, 255, 0, 0.18);
   }
 
   .app-demo-home__button--secondary {
-    border: 1px solid rgba(15, 23, 42, 0.1);
-    background: rgba(255, 255, 255, 0.88);
-    color: #0f172a;
-  }
-
-  .app-demo-home__proof {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.2rem;
-  }
-
-  .app-demo-home__proof-item {
-    padding: 1.6rem;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-  }
-
-  .app-demo-home__proof-label {
-    display: block;
-    margin-bottom: 0.4rem;
-    color: #64748b;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .app-demo-home__proof-value {
-    color: #0f172a;
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-  }
-
-  .app-demo-home__panel {
-    position: relative;
-    padding: 2.4rem;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 3.2rem;
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.08);
-  }
-
-  .app-demo-home__panel-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .app-demo-home__panel-brand {
-    color: #0f172a;
-    font-size: 1.4rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .app-demo-home__panel-badge {
-    padding: 0.8rem 1.2rem;
-    border-radius: 999px;
-    background: rgba(25, 195, 125, 0.12);
-    color: #047857;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .app-demo-home__product {
-    display: grid;
-    gap: 1.6rem;
-  }
-
-  .app-demo-home__product-card {
-    padding: 2rem;
-    border-radius: 2.4rem;
-    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
-    border: 1px solid rgba(15, 92, 255, 0.12);
-  }
-
-  .app-demo-home__product-image {
-    display: grid;
-    place-items: center;
-    min-height: 18rem;
-    border-radius: 2rem;
-    background:
-      radial-gradient(circle at top, rgba(15, 92, 255, 0.16), transparent 40%),
-      linear-gradient(145deg, #0f172a 0%, #1e3a8a 100%);
-    color: rgba(255, 255, 255, 0.92);
-  }
-
-  .app-demo-home__product-kicker {
-    display: inline-flex;
-    padding: 0.6rem 1rem;
-    margin: 1.6rem 0 1rem;
-    border-radius: 999px;
-    background: rgba(15, 92, 255, 0.1);
-    color: #0f5cff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .app-demo-home__product-title {
-    margin: 0 0 0.6rem;
-    color: #0f172a;
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-  }
-
-  .app-demo-home__product-copy {
-    margin: 0 0 1.4rem;
-    color: #64748b;
-    font-size: 1.5rem;
-  }
-
-  .app-demo-home__cta-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.6rem;
-    padding: 1.4rem 1.6rem;
-    border-radius: 1.8rem;
-    background: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-  }
-
-  .app-demo-home__price {
-    color: #0f172a;
-    font-size: 1.7rem;
-    font-weight: 800;
-  }
-
-  .app-demo-home__price small {
-    display: block;
-    color: #64748b;
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  .app-demo-home__preorder {
-    padding: 1.1rem 1.8rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #0f5cff 0%, #2563eb 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
     color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 700;
   }
 
-  .app-demo-home__notify-grid {
+  .app-demo-home__highlights {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.2rem;
+    gap: 1.2rem 2rem;
+    max-width: 76rem;
   }
 
-  .app-demo-home__notify-card {
-    padding: 1.6rem;
-    border-radius: 2rem;
-    background: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+  .app-demo-home__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    color: #ffffff;
+    font-size: 1.7rem;
+    line-height: 1.55;
   }
 
-  .app-demo-home__notify-card strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #0f172a;
+  .app-demo-home__highlight svg {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: #d9ff00;
+  }
+
+  .app-demo-home__hero-visual {
+    position: relative;
+    min-height: 58rem;
+  }
+
+  .app-demo-home__shape {
+    position: absolute;
+    right: -5rem;
+    bottom: 1rem;
+    width: 36rem;
+    height: 42rem;
+    border-radius: 4rem 4rem 3rem 3rem;
+    background: linear-gradient(180deg, rgba(198, 255, 0, 0.88) 0%, rgba(126, 155, 18, 0.28) 100%);
+    filter: blur(0.2px);
+    opacity: 0.88;
+  }
+
+  .app-demo-home__shape::before {
+    content: '';
+    position: absolute;
+    inset: 5rem 5rem auto;
+    height: 18rem;
+    border-radius: 4rem 4rem 2rem 2rem;
+    background: linear-gradient(180deg, rgba(198, 255, 0, 0.9) 0%, rgba(142, 175, 20, 0.4) 100%);
+  }
+
+  .app-demo-home__phone {
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+    width: 29rem;
+    padding: 1.2rem;
+    border-radius: 3.8rem;
+    background: #2d2d2d;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
+  }
+
+  .app-demo-home__phone-inner {
+    position: relative;
+    padding: 3.2rem 2.2rem 2.2rem;
+    border-radius: 3rem;
+    background: #131515;
+    min-height: 52rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .app-demo-home__phone-inner::before {
+    content: '';
+    position: absolute;
+    top: 1.4rem;
+    left: 50%;
+    width: 8rem;
+    height: 0.7rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateX(-50%);
+  }
+
+  .app-demo-home__phone-image {
+    width: 11rem;
+    height: 14rem;
+    margin: 3.8rem auto 2.4rem;
+    border-radius: 2.4rem;
+    background: radial-gradient(circle at 55% 48%, #f8d1dc 0%, #f4a6b8 35%, #efe8e6 75%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 0 0 0.8rem rgba(255, 255, 255, 0.08);
+  }
+
+  .app-demo-home__phone-title {
+    margin: 0 0 0.6rem;
+    color: #ffffff;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .app-demo-home__phone-copy {
+    margin: 0 0 1rem;
+    color: rgba(255, 255, 255, 0.74);
     font-size: 1.4rem;
   }
 
-  .app-demo-home__notify-card span {
-    color: #64748b;
+  .app-demo-home__phone-price {
+    margin: 0 0 2rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .app-demo-home__phone-price span {
+    color: rgba(255, 255, 255, 0.68);
     font-size: 1.3rem;
-    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .app-demo-home__phone-buttons {
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .app-demo-home__phone-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.8rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .app-demo-home__phone-pill--primary {
+    background: #d9ff00;
+    color: #111313;
+  }
+
+  .app-demo-home__phone-pill--ghost {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+    background: transparent;
   }
 
   .app-demo-home__section {
@@ -281,199 +266,309 @@
   }
 
   .app-demo-home__section-header {
-    max-width: 74rem;
-    margin: 0 auto 3.2rem;
+    max-width: 82rem;
+    margin: 0 auto 3.6rem;
     text-align: center;
   }
 
   .app-demo-home__label {
     display: inline-block;
-    margin-bottom: 1.2rem;
-    color: #0f5cff;
-    font-size: 1.2rem;
-    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #d9ff00;
+    font-size: 1.3rem;
+    font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 
   .app-demo-home__heading {
     margin: 0 0 1.2rem;
-    color: #0f172a;
-    font-size: clamp(2.8rem, 4.8vw, 4.6rem);
+    color: #ffffff;
+    font-size: clamp(2.9rem, 5vw, 4.8rem);
     line-height: 1.06;
     letter-spacing: -0.05em;
   }
 
   .app-demo-home__subcopy {
     margin: 0;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.72);
     font-size: 1.7rem;
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
-  .app-demo-home__feature-grid,
-  .app-demo-home__benefit-grid {
+  .app-demo-home__features {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 2.4rem;
   }
 
-  .app-demo-home__feature-card,
-  .app-demo-home__benefit-card {
-    height: 100%;
-    padding: 2.8rem;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 2.8rem;
-    background: rgba(255, 255, 255, 0.82);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.04);
+  .app-demo-home__feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(28rem, 0.9fr);
+    gap: 2.8rem;
+    align-items: center;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 3.2rem;
+    background: rgba(255, 255, 255, 0.03);
   }
 
-  .app-demo-home__icon {
+  .app-demo-home__feature-copy {
+    max-width: 62rem;
+  }
+
+  .app-demo-home__feature-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1.8rem;
+    color: #ffffff;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+
+  .app-demo-home__feature-title svg {
+    color: #d9ff00;
+  }
+
+  .app-demo-home__feature-points {
+    display: grid;
+    gap: 1.6rem;
+  }
+
+  .app-demo-home__feature-point {
+    display: flex;
+    gap: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+
+  .app-demo-home__feature-point strong {
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .app-demo-home__feature-point svg {
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+    color: #d9ff00;
+  }
+
+  .app-demo-home__preview {
+    position: relative;
+    min-height: 40rem;
+  }
+
+  .app-demo-home__dashboard {
+    position: absolute;
+    left: 0;
+    right: 8rem;
+    bottom: 0;
+    padding: 1.8rem;
+    border-radius: 2.4rem;
+    background: #f4f4f4;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+  }
+
+  .app-demo-home__dashboard-top {
+    height: 2.6rem;
+    margin-bottom: 1.4rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(90deg, #ffffff 0%, #ececec 100%);
+  }
+
+  .app-demo-home__dashboard-search {
+    height: 1.8rem;
+    width: 34%;
+    margin-bottom: 1.4rem;
+    border-radius: 999px;
+    background: #e0e0e0;
+  }
+
+  .app-demo-home__dashboard-lines {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .app-demo-home__dashboard-line {
+    height: 3rem;
+    border-radius: 0.8rem;
+    background: linear-gradient(90deg, #ffffff 0%, #ebebeb 100%);
+  }
+
+  .app-demo-home__preview-phone {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    background: #2f2f2f;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.38);
+  }
+
+  .app-demo-home__preview-screen {
+    padding: 2.8rem 1.6rem 1.8rem;
+    border-radius: 2.3rem;
+    min-height: 34rem;
+    background: #151717;
+    text-align: center;
+  }
+
+  .app-demo-home__preview-image {
+    width: 7.8rem;
+    height: 10rem;
+    margin: 1rem auto 1.8rem;
+    border-radius: 1.8rem;
+    background: radial-gradient(circle at 55% 48%, #f8d1dc 0%, #f4a6b8 35%, #efe8e6 75%);
+  }
+
+  .app-demo-home__preview-screen h4 {
+    margin: 0 0 0.6rem;
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 800;
+  }
+
+  .app-demo-home__preview-screen p {
+    margin: 0 0 1.6rem;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 1.25rem;
+  }
+
+  .app-demo-home__preview-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 5.6rem;
-    height: 5.6rem;
-    margin-bottom: 1.8rem;
-    border-radius: 1.8rem;
-    background: linear-gradient(135deg, rgba(15, 92, 255, 0.12) 0%, rgba(25, 195, 125, 0.14) 100%);
-    color: #0f5cff;
+    width: 100%;
+    min-height: 4rem;
+    margin-top: 1rem;
+    border-radius: 999px;
+    font-size: 1.35rem;
+    font-weight: 700;
   }
 
-  .app-demo-home__card-title {
-    margin: 0 0 1rem;
-    color: #0f172a;
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
+  .app-demo-home__preview-btn--primary {
+    background: #d9ff00;
+    color: #111313;
   }
 
-  .app-demo-home__card-text {
-    margin: 0;
-    color: #64748b;
-    font-size: 1.5rem;
-    line-height: 1.7;
-  }
-
-  .app-demo-home__workflow {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    counter-reset: app-demo-steps;
-  }
-
-  .app-demo-home__step {
-    position: relative;
-    padding: 2.8rem;
-    border-radius: 2.8rem;
-    background: #0f172a;
-    color: #e2e8f0;
-    overflow: hidden;
-  }
-
-  .app-demo-home__step::before {
-    counter-increment: app-demo-steps;
-    content: "0" counter(app-demo-steps);
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    color: rgba(255, 255, 255, 0.14);
-    font-size: 4.2rem;
-    font-weight: 800;
-    letter-spacing: -0.06em;
-  }
-
-  .app-demo-home__step h3 {
-    margin: 0 0 1rem;
+  .app-demo-home__preview-btn--ghost {
+    border: 1px solid rgba(255, 255, 255, 0.24);
     color: #ffffff;
-    font-size: 2rem;
+  }
+
+  .app-demo-home__benefits {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.6rem;
+  }
+
+  .app-demo-home__benefit {
+    padding: 2.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 2.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    text-align: left;
+  }
+
+  .app-demo-home__benefit h3 {
+    margin: 0 0 0.8rem;
+    color: #ffffff;
+    font-size: 1.9rem;
     font-weight: 800;
     letter-spacing: -0.03em;
   }
 
-  .app-demo-home__step p {
+  .app-demo-home__benefit p {
     margin: 0;
-    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.45rem;
     line-height: 1.7;
   }
 
-  .app-demo-home__benefit-card {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 247, 251, 0.96) 100%);
+  .app-demo-home__cta {
+    padding: 1rem 0 8rem;
   }
 
-  .app-demo-home__final {
-    padding: 5rem 0 8rem;
-  }
-
-  .app-demo-home__final-box {
+  .app-demo-home__cta-box {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 2rem;
+    gap: 2.4rem;
     align-items: center;
     padding: 3.2rem;
+    border: 1px solid rgba(198, 255, 0, 0.18);
     border-radius: 3.2rem;
-    background: linear-gradient(135deg, #0f172a 0%, #0f5cff 100%);
-    color: #ffffff;
-    box-shadow: 0 30px 80px rgba(15, 92, 255, 0.2);
+    background: linear-gradient(135deg, rgba(198, 255, 0, 0.12) 0%, rgba(255, 255, 255, 0.04) 58%);
   }
 
-  .app-demo-home__final-box h2 {
-    margin: 0 0 0.8rem;
-    font-size: clamp(2.8rem, 4vw, 4.2rem);
-    line-height: 1.05;
+  .app-demo-home__cta-box h2 {
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-size: clamp(2.8rem, 4vw, 4.4rem);
+    line-height: 1.06;
     letter-spacing: -0.05em;
-    color: #ffffff;
   }
 
-  .app-demo-home__final-box p {
+  .app-demo-home__cta-box p {
     margin: 0;
-    max-width: 64rem;
-    color: rgba(255, 255, 255, 0.84);
-    font-size: 1.6rem;
-    line-height: 1.7;
+    max-width: 76rem;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 1.65rem;
+    line-height: 1.75;
   }
 
-  .app-demo-home__final-box .app-demo-home__button--secondary {
-    border-color: rgba(255, 255, 255, 0.18);
-    background: #ffffff;
-    color: #0f172a;
+  @media screen and (max-width: 1199px) {
+    .app-demo-home__benefits {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
 
   @media screen and (max-width: 989px) {
     .app-demo-home__hero,
-    .app-demo-home__final-box,
-    .app-demo-home__feature-grid,
-    .app-demo-home__benefit-grid,
-    .app-demo-home__workflow {
-      grid-template-columns: 1fr;
-    }
-
-    .app-demo-home__proof {
+    .app-demo-home__feature,
+    .app-demo-home__cta-box {
       grid-template-columns: 1fr;
     }
 
     .app-demo-home__hero {
-      padding-top: 6.2rem;
+      padding-top: 6rem;
     }
 
-    .app-demo-home__panel {
-      max-width: 64rem;
-      margin: 0 auto;
+    .app-demo-home__hero-visual {
+      min-height: 50rem;
+    }
+
+    .app-demo-home__shape {
+      right: 2rem;
+      width: 30rem;
+      height: 34rem;
+    }
+
+    .app-demo-home__phone {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .app-demo-home__dashboard {
+      right: 3rem;
+    }
+
+    .app-demo-home__benefits {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media screen and (max-width: 749px) {
     .app-demo-home__hero {
       gap: 3rem;
-      padding: 5rem 0 4rem;
-    }
-
-    .app-demo-home__section {
-      padding-bottom: 5rem;
+      padding: 4.8rem 0 4rem;
     }
 
     .app-demo-home__title {
-      font-size: clamp(3.4rem, 12vw, 5rem);
+      font-size: clamp(3.6rem, 12vw, 5.2rem);
     }
 
     .app-demo-home__description,
@@ -481,25 +576,69 @@
       font-size: 1.55rem;
     }
 
-    .app-demo-home__notify-grid {
+    .app-demo-home__actions,
+    .app-demo-home__highlights {
       grid-template-columns: 1fr;
-    }
-
-    .app-demo-home__panel,
-    .app-demo-home__feature-card,
-    .app-demo-home__benefit-card,
-    .app-demo-home__step,
-    .app-demo-home__final-box {
-      padding: 2.2rem;
-    }
-
-    .app-demo-home__actions {
       flex-direction: column;
-      align-items: stretch;
     }
 
     .app-demo-home__button {
       width: 100%;
+    }
+
+    .app-demo-home__highlights {
+      display: grid;
+    }
+
+    .app-demo-home__hero-visual {
+      min-height: 41rem;
+    }
+
+    .app-demo-home__shape {
+      width: 21rem;
+      height: 24rem;
+      right: 0;
+    }
+
+    .app-demo-home__shape::before {
+      inset: 3rem 3rem auto;
+      height: 10rem;
+    }
+
+    .app-demo-home__phone {
+      width: 23rem;
+      top: 0;
+    }
+
+    .app-demo-home__phone-inner {
+      min-height: 42rem;
+    }
+
+    .app-demo-home__feature,
+    .app-demo-home__cta-box {
+      padding: 2.2rem;
+    }
+
+    .app-demo-home__feature-point {
+      font-size: 1.65rem;
+    }
+
+    .app-demo-home__preview {
+      min-height: 28rem;
+    }
+
+    .app-demo-home__dashboard {
+      position: relative;
+      right: auto;
+      padding: 1.2rem;
+    }
+
+    .app-demo-home__preview-phone {
+      display: none;
+    }
+
+    .app-demo-home__benefits {
+      grid-template-columns: 1fr;
     }
   }
 {%- endstyle -%}
@@ -509,17 +648,28 @@
     <div class="app-demo-home__hero">
       <div>
         <div class="app-demo-home__eyebrow">
-          <span class="app-demo-home__eyebrow-dot"></span>
-          Built for Shopify product launches
+          <span class="app-demo-home__eyebrow-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M6 6h15l-1.5 9H8L6 4H3"></path>
+              <path d="M9 19a1 1 0 1 0 0 .01"></path>
+              <path d="M18 19a1 1 0 1 0 0 .01"></path>
+              <path d="M8 9h10"></path>
+              <path d="M12 3v4"></path>
+              <path d="M9 5h6"></path>
+            </svg>
+          </span>
+          <span>{{ section.settings.app_name }}</span>
         </div>
+
         <h1 class="app-demo-home__title">
-          Turn sold-out moments
-          <span>into new revenue.</span>
+          Boost sales with smart
+          <span>Pre-Order, Notify Me & Coming Soon</span>
         </h1>
+
         <p class="app-demo-home__description">
-          {{ section.settings.app_name }} helps merchants replace dead-end out-of-stock experiences with pre-orders,
-          back-in-stock alerts, and coming-soon campaigns that keep demand moving.
+          {{ section.settings.description }}
         </p>
+
         <div class="app-demo-home__actions">
           <a class="app-demo-home__button app-demo-home__button--primary" href="{{ section.settings.primary_link }}">
             {{ section.settings.primary_label }}
@@ -528,58 +678,39 @@
             {{ section.settings.secondary_label }}
           </a>
         </div>
-        <div class="app-demo-home__proof">
-          <div class="app-demo-home__proof-item">
-            <span class="app-demo-home__proof-label">Use case</span>
-            <span class="app-demo-home__proof-value">Pre-order launches</span>
+
+        <div class="app-demo-home__highlights">
+          <div class="app-demo-home__highlight">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+            <span>Boost sales with preorders</span>
           </div>
-          <div class="app-demo-home__proof-item">
-            <span class="app-demo-home__proof-label">Supports</span>
-            <span class="app-demo-home__proof-value">Notify me flows</span>
+          <div class="app-demo-home__highlight">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+            <span>Create hype with coming soon</span>
           </div>
-          <div class="app-demo-home__proof-item">
-            <span class="app-demo-home__proof-label">Merchant goal</span>
-            <span class="app-demo-home__proof-value">Recover lost sales</span>
+          <div class="app-demo-home__highlight">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+            <span>Engage customers with restock alerts</span>
+          </div>
+          <div class="app-demo-home__highlight">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+            <span>One-click enable or disable with sales tracking</span>
           </div>
         </div>
       </div>
 
-      <div class="app-demo-home__panel">
-        <div class="app-demo-home__panel-header">
-          <span class="app-demo-home__panel-brand">Demo storefront</span>
-          <span class="app-demo-home__panel-badge">App widgets active</span>
-        </div>
-
-        <div class="app-demo-home__product">
-          <div class="app-demo-home__product-card">
-            <div class="app-demo-home__product-image">
-              <svg width="126" height="126" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-                <rect x="20" y="14" width="80" height="92" rx="24" fill="rgba(255,255,255,0.16)"/>
-                <rect x="34" y="26" width="52" height="40" rx="16" fill="rgba(255,255,255,0.84)"/>
-                <path d="M40 77H80" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                <path d="M48 89H72" stroke="white" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
-              </svg>
-            </div>
-            <span class="app-demo-home__product-kicker">Out of stock? Keep selling</span>
-            <h2 class="app-demo-home__product-title">Limited Edition Launch Kit</h2>
-            <p class="app-demo-home__product-copy">Swap the default sold-out state with a branded pre-order call to action.</p>
-            <div class="app-demo-home__cta-row">
-              <div class="app-demo-home__price">
-                $89.00
-                <small>Expected ship date: 7 days</small>
-              </div>
-              <div class="app-demo-home__preorder">Pre-order now</div>
-            </div>
-          </div>
-
-          <div class="app-demo-home__notify-grid">
-            <div class="app-demo-home__notify-card">
-              <strong>Notify Me</strong>
-              <span>Collect demand when inventory hits zero and trigger restock alerts automatically.</span>
-            </div>
-            <div class="app-demo-home__notify-card">
-              <strong>Coming Soon</strong>
-              <span>Build launch momentum before a product is available for purchase.</span>
+      <div class="app-demo-home__hero-visual">
+        <div class="app-demo-home__shape"></div>
+        <div class="app-demo-home__phone">
+          <div class="app-demo-home__phone-inner">
+            <div class="app-demo-home__phone-image"></div>
+            <h3 class="app-demo-home__phone-title">Apple iphone 15</h3>
+            <p class="app-demo-home__phone-copy">ESTS - testing</p>
+            <p class="app-demo-home__phone-price">Rs. 69,900.00 <span>Sold out</span></p>
+            <div class="app-demo-home__phone-buttons">
+              <span class="app-demo-home__phone-pill app-demo-home__phone-pill--ghost">Sold out</span>
+              <span class="app-demo-home__phone-pill app-demo-home__phone-pill--primary">Buy it now</span>
+              <span class="app-demo-home__phone-pill app-demo-home__phone-pill--ghost">Notify Me When Available</span>
             </div>
           </div>
         </div>
@@ -589,117 +720,208 @@
     <div class="app-demo-home__section" id="app-overview">
       <div class="app-demo-home__section-header">
         <span class="app-demo-home__label">About the app</span>
-        <h2 class="app-demo-home__heading">One app for pre-orders, restock alerts, and launch campaigns.</h2>
+        <h2 class="app-demo-home__heading">Manage out-of-stock and upcoming products effortlessly.</h2>
         <p class="app-demo-home__subcopy">
-          This demo store is designed for your Shopify App Store visitors to quickly understand what the app does,
-          where it appears on the storefront, and why merchants use it.
+          Seamlessly integrated with Shopify, {{ section.settings.app_name }} lets merchants enable pre-orders,
+          notify-me flows, and coming-soon experiences while keeping the storefront clear, branded, and conversion-focused.
         </p>
       </div>
 
-      <div class="app-demo-home__feature-grid">
-        <div class="app-demo-home__feature-card">
-          <div class="app-demo-home__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
-              <path d="M3 6h18"></path>
-              <path d="M16 10a4 4 0 0 1-8 0"></path>
-            </svg>
+      <div class="app-demo-home__features">
+        <div class="app-demo-home__feature">
+          <div class="app-demo-home__feature-copy">
+            <h3 class="app-demo-home__feature-title">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 6h15l-1.5 9H8L6 4H3"></path>
+                <path d="M9 19a1 1 0 1 0 0 .01"></path>
+                <path d="M18 19a1 1 0 1 0 0 .01"></path>
+              </svg>
+              Pre-Order
+            </h3>
+            <div class="app-demo-home__feature-points">
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span><strong>Pre-Order Functionality:</strong> Allow customers to pre-order out-of-stock products.</span>
+              </div>
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span><strong>Quantity Limits:</strong> Set limits on how many units a customer can pre-order.</span>
+              </div>
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span>Enable or disable the pre-order button with a single switch and schedule availability when needed.</span>
+              </div>
+            </div>
           </div>
-          <h3 class="app-demo-home__card-title">Pre-order with confidence</h3>
-          <p class="app-demo-home__card-text">
-            Let customers check out even when stock is unavailable, while you control messaging, expected availability,
-            and quantity limits.
-          </p>
-        </div>
 
-        <div class="app-demo-home__feature-card">
-          <div class="app-demo-home__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg>
+          <div class="app-demo-home__preview">
+            <div class="app-demo-home__dashboard">
+              <div class="app-demo-home__dashboard-top"></div>
+              <div class="app-demo-home__dashboard-search"></div>
+              <div class="app-demo-home__dashboard-lines">
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+              </div>
+            </div>
+            <div class="app-demo-home__preview-phone">
+              <div class="app-demo-home__preview-screen">
+                <div class="app-demo-home__preview-image"></div>
+                <h4>Apple iphone 15</h4>
+                <p>Rs. 69,900.00</p>
+                <span class="app-demo-home__preview-btn app-demo-home__preview-btn--primary">Pre-order</span>
+              </div>
+            </div>
           </div>
-          <h3 class="app-demo-home__card-title">Recover intent with alerts</h3>
-          <p class="app-demo-home__card-text">
-            Show a polished notify-me button and capture subscribers who want to be first when inventory returns.
-          </p>
         </div>
 
-        <div class="app-demo-home__feature-card">
-          <div class="app-demo-home__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-              <path d="M16 2v4"></path>
-              <path d="M8 2v4"></path>
-              <path d="M3 10h18"></path>
-            </svg>
+        <div class="app-demo-home__feature">
+          <div class="app-demo-home__feature-copy">
+            <h3 class="app-demo-home__feature-title">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              </svg>
+              Notify Me
+            </h3>
+            <div class="app-demo-home__feature-points">
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span><strong>Notify Me Button:</strong> Show a notify-me button for out-of-stock items.</span>
+              </div>
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span><strong>Stock Alerts:</strong> Send automatic email alerts when products are restocked.</span>
+              </div>
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span>Keep customers engaged instead of losing them at the sold-out stage.</span>
+              </div>
+            </div>
           </div>
-          <h3 class="app-demo-home__card-title">Create launch hype</h3>
-          <p class="app-demo-home__card-text">
-            Launch upcoming drops with coming-soon messaging so visitors stay engaged before inventory goes live.
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="app-demo-home__section" id="how-it-works">
-      <div class="app-demo-home__section-header">
-        <span class="app-demo-home__label">How it works</span>
-        <h2 class="app-demo-home__heading">A simple storefront flow merchants can understand at a glance.</h2>
-        <p class="app-demo-home__subcopy">
-          For a demo store, clarity matters more than complexity. This homepage now shows the exact merchant journey:
-          enable the app, replace sold-out friction, and convert demand.
-        </p>
-      </div>
+          <div class="app-demo-home__preview">
+            <div class="app-demo-home__dashboard">
+              <div class="app-demo-home__dashboard-top"></div>
+              <div class="app-demo-home__dashboard-search"></div>
+              <div class="app-demo-home__dashboard-lines">
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+              </div>
+            </div>
+            <div class="app-demo-home__preview-phone">
+              <div class="app-demo-home__preview-screen">
+                <div class="app-demo-home__preview-image"></div>
+                <h4>Apple iphone 15</h4>
+                <p>Rs. 69,900.00 &middot; Sold out</p>
+                <span class="app-demo-home__preview-btn app-demo-home__preview-btn--ghost">Sold out</span>
+                <span class="app-demo-home__preview-btn app-demo-home__preview-btn--primary">Buy it now</span>
+                <span class="app-demo-home__preview-btn app-demo-home__preview-btn--ghost">Notify Me When Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="app-demo-home__workflow">
-        <div class="app-demo-home__step">
-          <h3>Enable the widget</h3>
-          <p>Choose pre-order, notify me, or coming soon for selected products and collections in just a few clicks.</p>
-        </div>
-        <div class="app-demo-home__step">
-          <h3>Customize the message</h3>
-          <p>Match your storefront with branded button text, availability notes, and launch-focused customer messaging.</p>
-        </div>
-        <div class="app-demo-home__step">
-          <h3>Capture revenue and demand</h3>
-          <p>Keep shoppers engaged instead of losing them at the sold-out state, then follow up automatically after restock.</p>
+        <div class="app-demo-home__feature">
+          <div class="app-demo-home__feature-copy">
+            <h3 class="app-demo-home__feature-title">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                <path d="M16 2v4"></path>
+                <path d="M8 2v4"></path>
+                <path d="M3 10h18"></path>
+              </svg>
+              Coming Soon
+            </h3>
+            <div class="app-demo-home__feature-points">
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span><strong>Coming Soon Mode:</strong> Display a coming-soon button for upcoming products.</span>
+              </div>
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span>Build anticipation and boost engagement before launch.</span>
+              </div>
+              <div class="app-demo-home__feature-point">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h8l8 8-8 8H4l8-8-8-8Z"></path></svg>
+                <span>Create excitement for new arrivals while keeping storefront messaging consistent.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-demo-home__preview">
+            <div class="app-demo-home__dashboard">
+              <div class="app-demo-home__dashboard-top"></div>
+              <div class="app-demo-home__dashboard-search"></div>
+              <div class="app-demo-home__dashboard-lines">
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+                <div class="app-demo-home__dashboard-line"></div>
+              </div>
+            </div>
+            <div class="app-demo-home__preview-phone">
+              <div class="app-demo-home__preview-screen">
+                <div class="app-demo-home__preview-image"></div>
+                <h4>Apple iphone 15</h4>
+                <p>Rs. 69,900.00 &middot; Sold out</p>
+                <span class="app-demo-home__preview-btn app-demo-home__preview-btn--primary">Coming Soon</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="app-demo-home__section" id="merchant-benefits">
       <div class="app-demo-home__section-header">
-        <span class="app-demo-home__label">Why merchants use it</span>
-        <h2 class="app-demo-home__heading">Designed to feel useful in real storefronts, not just in a feature list.</h2>
+        <span class="app-demo-home__label">Core benefits</span>
+        <h2 class="app-demo-home__heading">Everything merchants need to keep demand alive.</h2>
       </div>
 
-      <div class="app-demo-home__benefit-grid">
-        <div class="app-demo-home__benefit-card">
-          <h3 class="app-demo-home__card-title">Keep product pages converting</h3>
-          <p class="app-demo-home__card-text">Replace default dead ends with actions customers can actually take right now.</p>
+      <div class="app-demo-home__benefits">
+        <div class="app-demo-home__benefit">
+          <h3>Pre-Order Functionality</h3>
+          <p>Allow customers to buy unavailable products in advance instead of waiting for restock.</p>
         </div>
-        <div class="app-demo-home__benefit-card">
-          <h3 class="app-demo-home__card-title">Show the app in context</h3>
-          <p class="app-demo-home__card-text">Your App Store reviewers and prospects can immediately understand the storefront impact.</p>
+        <div class="app-demo-home__benefit">
+          <h3>Quantity Limits</h3>
+          <p>Set how many units each customer can pre-order and manage stock expectations better.</p>
         </div>
-        <div class="app-demo-home__benefit-card">
-          <h3 class="app-demo-home__card-title">Support launch-heavy brands</h3>
-          <p class="app-demo-home__card-text">Ideal for limited drops, seasonal restocks, and brands managing demand around inventory gaps.</p>
+        <div class="app-demo-home__benefit">
+          <h3>Notify Me Button</h3>
+          <p>Collect demand from sold-out traffic with a simple and clear notify-me experience.</p>
+        </div>
+        <div class="app-demo-home__benefit">
+          <h3>Stock Alerts</h3>
+          <p>Send automatic restock emails so interested customers return as soon as inventory is back.</p>
+        </div>
+        <div class="app-demo-home__benefit">
+          <h3>Coming Soon Mode</h3>
+          <p>Generate launch excitement and help upcoming products feel intentional before they go live.</p>
         </div>
       </div>
     </div>
 
-    <div class="app-demo-home__final">
-      <div class="app-demo-home__final-box">
+    <div class="app-demo-home__cta" id="how-it-works">
+      <div class="app-demo-home__cta-box">
         <div>
-          <h2>Ready to show merchants how your app improves sold-out products?</h2>
+          <h2>Boost sales and retain customers with ease.</h2>
           <p>
-            This homepage is now structured like an app demo landing page: clearer positioning, stronger storytelling,
-            and sections that explain the value of {{ section.settings.app_name }} without making visitors hunt for it.
+            {{ section.settings.app_name }} is now presented with the same messaging direction as your provided visuals:
+            dark premium styling, neon accents, storefront-focused previews, and clear feature blocks for Shopify App Store demos.
           </p>
         </div>
-        <a class="app-demo-home__button app-demo-home__button--secondary" href="{{ section.settings.primary_link }}">
+        <a class="app-demo-home__button app-demo-home__button--primary" href="{{ section.settings.primary_link }}">
           {{ section.settings.primary_label }}
         </a>
       </div>
@@ -717,7 +939,13 @@
       "type": "text",
       "id": "app_name",
       "label": "App name",
-      "default": "ESTS PreOrder | Notify Me"
+      "default": "ESTS PreOrder | Notify"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "App description",
+      "default": "Boost Sales with Smart Pre-Order, Notify Me & Coming Soon Features. Our app helps you manage out-of-stock and upcoming products effortlessly. Enable Pre-Order to let customers buy unavailable items in advance, set quantity limits, and schedule availability. Use Notify Me to send automatic restock alerts and keep customers engaged. Activate Coming Soon to generate excitement for new arrivals."
     },
     {
       "type": "text",
@@ -734,7 +962,7 @@
       "type": "text",
       "id": "secondary_label",
       "label": "Secondary button label",
-      "default": "See how it works"
+      "default": "Explore features"
     },
     {
       "type": "url",

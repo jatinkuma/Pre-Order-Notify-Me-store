@@ -3,11 +3,12 @@
     "app_demo_home": {
       "type": "app-demo-home",
       "settings": {
-        "app_name": "ESTS PreOrder | Notify Me",
+        "app_name": "ESTS PreOrder | Notify",
+        "description": "Boost Sales with Smart Pre-Order, Notify Me & Coming Soon Features. Our app helps you manage out-of-stock and upcoming products effortlessly. Enable Pre-Order to let customers buy unavailable items in advance, set quantity limits, and schedule availability. Use Notify Me to send automatic restock alerts and keep customers engaged. Activate Coming Soon to generate excitement for new arrivals. Seamlessly integrated with Shopify, our app allows one-click enable or disable and sales tracking.",
         "primary_label": "Install app",
         "primary_link": "https://apps.shopify.com/ests-preorder-notify",
-        "secondary_label": "See how it works",
-        "secondary_link": "/#how-it-works"
+        "secondary_label": "Explore features",
+        "secondary_link": "/#app-overview"
       }
     }
   },
