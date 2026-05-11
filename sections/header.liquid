@@ -187,7 +187,13 @@
   <div class="header">
     <a href="/" class="header__brand" aria-label="ESTS PreOrder demo homepage">
       <span class="header__brand-mark" aria-hidden="true">
-        {{ 'Pre-order.png' | asset_url | image_tag: alt: 'ESTS Pre-order icon', loading: 'eager' }}
+        <img
+          src="{{ 'Pre-order.png' | asset_url }}"
+          alt="ESTS Pre-order icon"
+          loading="eager"
+          width="44"
+          height="44"
+        >
       </span>
       <span class="header__brand-copy">
         <span class="header__brand-title">ESTS PreOrder</span>
