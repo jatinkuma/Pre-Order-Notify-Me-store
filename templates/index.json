@@ -1,55 +1,17 @@
 {
   "sections": {
-    "feature_showcase": {
-      "type": "feature-showcase",
-      "settings": {}
-    },
-    "info_grids": {
-      "type": "info-grids",
-      "settings": {}
-    },
-    "featured_collection": {
-      "type": "featured-collection",
+    "app_demo_home": {
+      "type": "app-demo-home",
       "settings": {
-        "collection": "beauty-products",
-        "products_to_show": 4,
-        "title": "Try Our Demo Products",
-        "heading_size": "h2",
-        "description": "See how Pre-Order, Notify Me, and Coming Soon features look in action.",
-        "show_description": true,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-4",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "saas_cta": {
-      "type": "saas-cta",
-      "settings": {
-        "title": "Ready to boost your sales?",
-        "text": "Join thousands of merchants who use ESTS PreOrder | Notify to manage their out-of-stock products.",
-        "button_label": "Install App Now",
-        "button_link": "https://apps.shopify.com/ests-preorder-notify"
+        "app_name": "ESTS PreOrder | Notify Me",
+        "primary_label": "Install app",
+        "primary_link": "https://apps.shopify.com/ests-preorder-notify",
+        "secondary_label": "See how it works",
+        "secondary_link": "/#how-it-works"
       }
     }
   },
   "order": [
-    "feature_showcase",
-    "info_grids",
-    "featured_collection",
-    "saas_cta"
+    "app_demo_home"
   ]
 }

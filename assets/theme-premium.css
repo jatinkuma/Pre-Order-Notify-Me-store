@@ -15,7 +15,8 @@
   --border-soft: rgba(0, 0, 0, 0.05);
   --border-medium: rgba(0, 0, 0, 0.1);
   
-  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-inter: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Manrope', system-ui, sans-serif;
   
   --radius-xl: 32px;
   --radius-lg: 24px;
@@ -35,6 +36,15 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.h0,
+.h1,
+.h2 {
+  font-family: var(--font-display);
 }
 
 /* Section Title Styling */

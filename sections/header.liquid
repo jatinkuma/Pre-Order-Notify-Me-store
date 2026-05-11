@@ -1,75 +1,205 @@
 {%- style -%}
   .header-wrapper {
-    background: white !important;
-    border-bottom: 1px solid var(--border-soft) !important;
-    padding: 15px 0 !important;
     position: sticky !important;
     top: 0 !important;
-    z-index: 1000 !important;
+    z-index: 50 !important;
+    padding: 1.4rem 0 !important;
+    background: rgba(255, 255, 255, 0.82) !important;
+    backdrop-filter: blur(18px) !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
   }
+
   .header {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    gap: 2rem !important;
     max-width: var(--page-width) !important;
     margin: 0 auto !important;
-    padding: 0 20px !important;
+    padding: 0 2rem !important;
   }
-  .header__logo-link {
+
+  .header__brand {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
     text-decoration: none !important;
   }
+
+  .header__brand-mark {
+    display: grid !important;
+    place-items: center !important;
+    width: 4.4rem !important;
+    height: 4.4rem !important;
+    border-radius: 1.4rem !important;
+    background: linear-gradient(135deg, #0f5cff 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.04em !important;
+    box-shadow: 0 14px 28px rgba(15, 92, 255, 0.2) !important;
+  }
+
+  .header__brand-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.2rem !important;
+  }
+
+  .header__brand-title {
+    color: #0f172a !important;
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1 !important;
+  }
+
+  .header__brand-subtitle {
+    color: #64748b !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    line-height: 1.2 !important;
+  }
+
+  .header__navigation {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
   .header__menu-list {
     display: flex !important;
+    align-items: center !important;
+    gap: 2.4rem !important;
     list-style: none !important;
-    gap: 30px !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+
   .header__menu-item {
+    color: #334155 !important;
     text-decoration: none !important;
-    color: var(--text-main) !important;
-    font-weight: 600 !important;
-    font-size: 15px !important;
-    transition: color 0.3s ease !important;
-  }
-  .header__menu-item:hover {
-    color: var(--brand-primary) !important;
-  }
-  .header__install-btn {
-    background: var(--brand-primary) !important;
-    color: white !important;
-    padding: 12px 28px !important;
-    border-radius: var(--radius-pill) !important;
-    text-decoration: none !important;
+    font-size: 1.45rem !important;
     font-weight: 700 !important;
-    font-size: 14px !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    transition: color 180ms ease !important;
   }
+
+  .header__menu-item:hover {
+    color: #0f5cff !important;
+  }
+
+  .header__actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
+  }
+
+  .header__demo-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    padding: 1rem 1.4rem !important;
+    border-radius: 999px !important;
+    background: rgba(15, 92, 255, 0.08) !important;
+    color: #0f5cff !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .header__demo-pill::before {
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: #19c37d;
+    box-shadow: 0 0 0 0.4rem rgba(25, 195, 125, 0.12);
+  }
+
+  .header__install-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 4.8rem !important;
+    padding: 1.2rem 2rem !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, #0f5cff 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 14px 28px rgba(15, 92, 255, 0.2) !important;
+    transition: transform 180ms ease, box-shadow 180ms ease !important;
+  }
+
   .header__install-btn:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 10px 20px rgba(0, 71, 255, 0.2) !important;
+    box-shadow: 0 18px 34px rgba(15, 92, 255, 0.24) !important;
+  }
+
+  @media screen and (max-width: 989px) {
+    .header {
+      flex-wrap: wrap !important;
+      justify-content: space-between !important;
+    }
+
+    .header__navigation {
+      order: 3 !important;
+      flex: 1 0 100% !important;
+      justify-content: flex-start !important;
+    }
+
+    .header__menu-list {
+      flex-wrap: wrap !important;
+      gap: 1.4rem !important;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .header {
+      padding: 0 1.6rem !important;
+    }
+
+    .header__actions {
+      width: 100% !important;
+      justify-content: space-between !important;
+    }
+
+    .header__demo-pill {
+      display: none !important;
+    }
+
+    .header__install-btn {
+      width: 100% !important;
+    }
   }
 {%- endstyle -%}
 
 <header class="header-wrapper">
   <div class="header">
-    <div class="header__logo">
-      <a href="/" class="header__logo-link">
-        <span style="font-weight: 900; letter-spacing: -0.05em; color: var(--text-main); font-size: 20px; text-transform: uppercase;">
-          PREORDER-NOTIFY <span style="color: var(--brand-primary)">DEMO</span>
-        </span>
-      </a>
-    </div>
+    <a href="/" class="header__brand" aria-label="ESTS PreOrder demo homepage">
+      <span class="header__brand-mark">EP</span>
+      <span class="header__brand-copy">
+        <span class="header__brand-title">ESTS PreOrder</span>
+        <span class="header__brand-subtitle">Demo store experience</span>
+      </span>
+    </a>
 
-    <nav class="header__navigation">
+    <nav class="header__navigation" aria-label="Primary">
       <ul class="header__menu-list">
         <li><a href="/" class="header__menu-item">Home</a></li>
-        <li><a href="/collections/all" class="header__menu-item">All Products</a></li>
+        <li><a href="/collections/all" class="header__menu-item">Shop demo products</a></li>
+        <li><a href="/#app-overview" class="header__menu-item">About app</a></li>
+        <li><a href="/#how-it-works" class="header__menu-item">How it works</a></li>
       </ul>
     </nav>
 
     <div class="header__actions">
-      <a href="https://apps.shopify.com/ests-preorder-notify" class="header__install-btn">Install App</a>
+      <span class="header__demo-pill">Live app demo</span>
+      <a href="https://apps.shopify.com/ests-preorder-notify" class="header__install-btn">Install app</a>
     </div>
   </div>
 </header>
