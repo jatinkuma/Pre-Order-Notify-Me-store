@@ -9,6 +9,25 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  #main-cart-footer .cart__checkout-button {
+    background: #111827;
+    color: #ffffff;
+    border: 0;
+    border-radius: 1rem;
+    min-height: 5.6rem;
+    font-weight: 700;
+    box-shadow: 0 14px 30px rgba(17, 24, 39, 0.16);
+  }
+
+  #main-cart-footer .cart__checkout-button:hover {
+    background: #000000;
+  }
+
+  #main-cart-footer .cart__checkout-button[disabled] {
+    background: #9ca3af;
+    color: #ffffff;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
