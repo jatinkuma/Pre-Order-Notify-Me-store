@@ -36,23 +36,29 @@
   }
 
   .cart-items cart-remove-button .button {
+    --color-button: 255, 255, 255;
+    --color-button-text: 17, 24, 39;
+    --color-shadow: 15, 23, 42;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
     border: 0.1rem solid rgba(15, 23, 42, 0.14);
     border-radius: 0.8rem;
-    color: #111827;
+    color: #111827 !important;
   }
 
   .cart-items cart-remove-button .button:hover {
+    --color-button: 255, 244, 244;
+    --color-button-text: 185, 28, 28;
     background: #fff4f4;
     border-color: rgba(220, 38, 38, 0.32);
-    color: #b91c1c;
+    color: #b91c1c !important;
   }
 
   .cart-items cart-remove-button .icon-remove {
-    color: currentColor;
+    color: currentColor !important;
+    fill: currentColor !important;
     opacity: 1;
   }
 
