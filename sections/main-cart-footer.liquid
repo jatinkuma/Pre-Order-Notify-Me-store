@@ -13,6 +13,8 @@
     --color-button: 17, 24, 39;
     --color-button-text: 255, 255, 255;
     --color-shadow: 17, 24, 39;
+    --alpha-button-background: 1;
+    --alpha-button-border: 0;
     background: #111827;
     color: #ffffff !important;
     border: 0 !important;
@@ -23,6 +25,8 @@
   }
 
   #main-cart-footer .cart__checkout-button:after {
+    z-index: 0 !important;
+    background: #111827 !important;
     box-shadow: 0 0 0 0.1rem rgba(17, 24, 39, 0.04), 0 0 0 0 rgba(17, 24, 39, 0) !important;
   }
 
@@ -32,6 +36,8 @@
 
   #main-cart-footer .cart__checkout-button,
   #main-cart-footer .cart__checkout-button span {
+    position: relative;
+    z-index: 2;
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
   }
