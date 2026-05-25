@@ -140,6 +140,43 @@
     transition: transform 180ms ease, box-shadow 180ms ease !important;
   }
 
+  .header__contact-btn {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 4.8rem !important;
+    padding: 1.2rem 2rem !important;
+    border: 1px solid rgba(15, 92, 255, 0.16) !important;
+    border-radius: 999px !important;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, rgba(15, 92, 255, 0.08) 0%, rgba(255, 255, 255, 0.94) 100%) !important;
+    color: #0f5cff !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 10px 24px rgba(15, 92, 255, 0.08) !important;
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, color 180ms ease !important;
+  }
+
+  .header__contact-btn::before {
+    content: '' !important;
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+    margin-right: 0.8rem !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #38bdf8 0%, #0f5cff 100%) !important;
+    box-shadow: 0 0 0 0.45rem rgba(15, 92, 255, 0.08) !important;
+    flex: 0 0 auto !important;
+  }
+
+  .header__contact-btn:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(15, 92, 255, 0.28) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 16px 30px rgba(15, 92, 255, 0.14) !important;
+    color: #0b48c7 !important;
+  }
+
   .header__install-btn:hover {
     transform: translateY(-2px) !important;
     box-shadow: 0 18px 34px rgba(15, 92, 255, 0.24) !important;
@@ -171,37 +208,29 @@
     .header__actions {
       width: 100% !important;
       justify-content: space-between !important;
-       padding-right: 2px !important;
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
     }
-
-    .header__contact-btn {
-    background: #eff6ff !important;
-    color: #1d4ed8 !important;
-    padding: 12px 18px !important;
-    border-radius: var(--radius-pill) !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-    display: inline-block !important;
-    border: 1px solid #bfdbfe !important;
-    white-space: nowrap !important;
-  }
-
-  .header__contact-btn:hover {
-    background: #dbeafe !important;
-    color: #1e3a8a !important;
-    transform: translateY(-2px);
-  }
 
     .header__demo-pill {
       display: none !important;
     }
 
+    .header__install-btn {
+      flex: 1 1 0 !important;
+    }
+
+    .header__contact-btn {
+      flex: 1 1 0 !important;
+      min-width: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .header__actions {
+      flex-direction: column !important;
+      align-items: stretch !important;
+    }
+
+    .header__contact-btn,
     .header__install-btn {
       width: 100% !important;
     }
